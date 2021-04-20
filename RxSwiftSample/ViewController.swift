@@ -14,6 +14,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func MVVMWithRxSwift(_ sender: UIButton) {
+        performSegue(withIdentifier: "toMVVM", sender: nil)
+    }
 }
 
