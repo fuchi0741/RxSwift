@@ -27,15 +27,17 @@ final class NewsViewController: UIViewController {
     }
     
     private func populateNews() {
-        let resource = Resource<ArticleResponse>(url: URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=0cf790498275413a9247f8b94b3843fd")!)
-        URLRequest.load(resource: resource).subscribe(onNext: { articleResponse in
-            let articles = articleResponse.articles
-            self.articleList = ArticleListViewModel(articles)
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }).disposed(by: disposeBag)
+        guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=0cf790498275413a9247f8b94b3843fd") else { return }
+        let resource = Resource<ArticleResponse>(url: url)
+        URLRequest.load(resource: resource)
+            .subscribe(onNext: { articleResponse in
+                let articles = articleResponse.articles
+                self.articleList = ArticleListViewModel(articles)
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }).disposed(by: disposeBag)
     }
 }
 
@@ -51,8 +53,8 @@ extension NewsViewController: UITableViewDataSource {
         let articleVM = self.articleList.articleAt(indexPath.row)
         
         articleVM.title.asDriver(onErrorJustReturn: "")
-        .drive(cell.titleLabel.rx.text)
-        .disposed(by: disposeBag)
+            .drive(cell.titleLabel.rx.text)
+            .disposed(by: disposeBag)
         
         articleVM.description.asDriver(onErrorJustReturn: "")
             .drive(cell.descriptionLabel.rx.text)

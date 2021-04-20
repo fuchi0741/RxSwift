@@ -20,6 +20,8 @@ extension URLRequest {
                 let request = URLRequest(url: url)
                 return URLSession.shared.rx.data(request: request)
             }.map { (data) -> T in
+                //dataはレスポンスされたJSONのデータ
+                //TはArticleResponse型
                 return try JSONDecoder().decode(T.self, from: data)
             }
     }
