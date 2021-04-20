@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func MVVMWithRxSwift(_ sender: UIButton) {
-        print("えもじ")
         performSegue(withIdentifier: "toMVVM", sender: nil)
     }
 }
