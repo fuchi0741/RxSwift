@@ -62,5 +62,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>写真撮ってもいいよね？</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>写真を使わせて欲しい😆</string>
 </dict>
 </plist>
