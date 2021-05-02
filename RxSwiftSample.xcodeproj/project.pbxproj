@@ -84,6 +84,7 @@
 		C579CB4126318ACD009FE91F /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
 		C5A7F44D263EBB1B00F56970 /* CountUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountUpViewController.swift; sourceTree = "<group>"; };
 		C5A7F45D263EBDBF00F56970 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
+		C5A7F462263ED07E00F56970 /* RxSample.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxSample.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F607CF75259828574382DCB7 /* Pods-RxSwiftSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftSampleTests.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftSampleTests/Pods-RxSwiftSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +142,7 @@
 		C538B35D262EAB0A008CE89D = {
 			isa = PBXGroup;
 			children = (
+				C5A7F462263ED07E00F56970 /* RxSample.playground */,
 				C538B368262EAB0A008CE89D /* RxSwiftSample */,
 				C538B37F262EAB0B008CE89D /* RxSwiftSampleTests */,
 				C538B38A262EAB0B008CE89D /* RxSwiftSampleUITests */,
