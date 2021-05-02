@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fEn-UK-msT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rty-4e-Bxe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -20,15 +20,22 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Rdb-y7-vmd">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACz-Ue-Oha">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="258"/>
+                                        <state key="normal" title="カウントアップApp"/>
+                                        <connections>
+                                            <segue destination="525-f0-79n" kind="show" id="XmG-ZS-NPM"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZf-cs-0Ls">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="387"/>
+                                        <rect key="frame" x="0.0" y="258" width="414" height="258"/>
                                         <state key="normal" title="基礎的なRxSwift"/>
                                         <connections>
                                             <action selector="basicRxSwift:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c9f-s3-EWj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWS-hn-cL1">
-                                        <rect key="frame" x="0.0" y="387" width="414" height="387"/>
+                                        <rect key="frame" x="0.0" y="516" width="414" height="258"/>
                                         <state key="normal" title="PickupPicture"/>
                                         <connections>
                                             <segue destination="58B-tA-1i4" kind="show" identifier="toMVVM" id="zYR-x5-3kq"/>
@@ -54,6 +61,104 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="725" y="84"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="L52-EP-b6J">
+            <objects>
+                <viewController id="525-f0-79n" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3v2-S6-nyN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bgL-VQ-Qkr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTw-8P-Gj9">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="387"/>
+                                        <state key="normal" title="Delegateパターン"/>
+                                        <connections>
+                                            <segue destination="Rty-4e-Bxe" kind="show" id="u8M-Oo-zVx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qx-rY-vpW">
+                                        <rect key="frame" x="0.0" y="387" width="414" height="387"/>
+                                        <state key="normal" title="RxSwiftパターン"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bKa-OX-tsE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bgL-VQ-Qkr" firstAttribute="top" secondItem="bKa-OX-tsE" secondAttribute="top" id="IKE-Sf-AG4"/>
+                            <constraint firstItem="bgL-VQ-Qkr" firstAttribute="leading" secondItem="bKa-OX-tsE" secondAttribute="leading" id="IyA-aF-XZR"/>
+                            <constraint firstItem="bKa-OX-tsE" firstAttribute="bottom" secondItem="bgL-VQ-Qkr" secondAttribute="bottom" id="aJc-Uj-VWP"/>
+                            <constraint firstItem="bKa-OX-tsE" firstAttribute="trailing" secondItem="bgL-VQ-Qkr" secondAttribute="trailing" id="bDo-Yb-UzQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Egu-fv-I5G"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZH-nv-Fpu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1409" y="-589"/>
+        </scene>
+        <!--Count Up View Controller-->
+        <scene sceneID="iqi-ZV-TEX">
+            <objects>
+                <viewController id="Rty-4e-Bxe" customClass="CountUpViewController" customModule="RxSwiftSample" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xNq-px-bhw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0Mb-a6-suI">
+                                <rect key="frame" x="0.0" y="269" width="414" height="358"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibM-pJ-oac">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xS4-Jp-hhE">
+                                        <rect key="frame" x="0.0" y="179" width="414" height="179"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDX-As-wv0">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                                                <state key="normal" title="カウントアップ"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrH-yJ-22L">
+                                                <rect key="frame" x="0.0" y="59.5" width="414" height="60"/>
+                                                <state key="normal" title="カウントダウン"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXN-E3-hoM">
+                                                <rect key="frame" x="0.0" y="119.5" width="414" height="59.5"/>
+                                                <state key="normal" title="リセット"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1yy-l7-prG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Mb-a6-suI" firstAttribute="leading" secondItem="1yy-l7-prG" secondAttribute="leading" id="5P0-4x-Ln2"/>
+                            <constraint firstItem="1yy-l7-prG" firstAttribute="trailing" secondItem="0Mb-a6-suI" secondAttribute="trailing" id="GDY-Fe-gCV"/>
+                            <constraint firstItem="0Mb-a6-suI" firstAttribute="centerY" secondItem="xNq-px-bhw" secondAttribute="centerY" id="UGF-Hh-FbW"/>
+                            <constraint firstItem="0Mb-a6-suI" firstAttribute="height" secondItem="xNq-px-bhw" secondAttribute="height" multiplier="0.4" id="yCE-M5-Yv5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Ya-cJ-dts"/>
+                    <connections>
+                        <outlet property="countDownButton" destination="zrH-yJ-22L" id="tbC-au-NjI"/>
+                        <outlet property="countLabel" destination="ibM-pJ-oac" id="Lws-hY-JDg"/>
+                        <outlet property="countupButton" destination="fDX-As-wv0" id="ife-5Q-yLe"/>
+                        <outlet property="resetButton" destination="fXN-E3-hoM" id="d09-uT-u4m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcG-Wg-llK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2232" y="-923"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="5RX-cn-FGr">
@@ -97,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Gv-7e-6Kp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1506" y="-149"/>
+            <point key="canvasLocation" x="1361" y="84"/>
         </scene>
         <!--Photo Collection View Controller-->
         <scene sceneID="U8A-uT-e0n">
@@ -143,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rR-Tg-AB3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228" y="-149"/>
+            <point key="canvasLocation" x="2016" y="84"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="3cp-ww-OII">
@@ -174,7 +279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9go-F9-lfw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1507" y="627"/>
+            <point key="canvasLocation" x="1410" y="756"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dgm-vT-Uxy">

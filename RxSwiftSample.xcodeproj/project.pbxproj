@@ -27,6 +27,8 @@
 		C579CB3B26318A38009FE91F /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C579CB3A26318A38009FE91F /* PhotoCollectionViewController.swift */; };
 		C579CB4226318ACD009FE91F /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C579CB4026318ACD009FE91F /* PhotosCollectionViewCell.swift */; };
 		C579CB4326318ACD009FE91F /* PhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C579CB4126318ACD009FE91F /* PhotosCollectionViewCell.xib */; };
+		C5A7F44E263EBB1B00F56970 /* CountUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A7F44D263EBB1B00F56970 /* CountUpViewController.swift */; };
+		C5A7F45E263EBDBF00F56970 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A7F45D263EBDBF00F56970 /* CounterViewModel.swift */; };
 		FE5A385764C4AB05878C9906 /* Pods_RxSwiftSample_RxSwiftSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5491594DBE20EEB985595 /* Pods_RxSwiftSample_RxSwiftSampleUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,8 @@
 		C579CB3A26318A38009FE91F /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		C579CB4026318ACD009FE91F /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		C579CB4126318ACD009FE91F /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
+		C5A7F44D263EBB1B00F56970 /* CountUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountUpViewController.swift; sourceTree = "<group>"; };
+		C5A7F45D263EBDBF00F56970 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
 		F607CF75259828574382DCB7 /* Pods-RxSwiftSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftSampleTests.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftSampleTests/Pods-RxSwiftSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +163,7 @@
 		C538B368262EAB0A008CE89D /* RxSwiftSample */ = {
 			isa = PBXGroup;
 			children = (
+				C5A7F44B263EBAF200F56970 /* CountupApp */,
 				C579CB30263187F7009FE91F /* GetPhotoApp */,
 				C538B3A9262EAD0C008CE89D /* NewsApp */,
 				C538B369262EAB0A008CE89D /* AppDelegate.swift */,
@@ -268,6 +273,23 @@
 				C579CB4126318ACD009FE91F /* PhotosCollectionViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C5A7F44B263EBAF200F56970 /* CountupApp */ = {
+			isa = PBXGroup;
+			children = (
+				C5A7F44C263EBB0C00F56970 /* Delegate */,
+			);
+			path = CountupApp;
+			sourceTree = "<group>";
+		};
+		C5A7F44C263EBB0C00F56970 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				C5A7F44D263EBB1B00F56970 /* CountUpViewController.swift */,
+				C5A7F45D263EBDBF00F56970 /* CounterViewModel.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,6 +535,8 @@
 				C538B36E262EAB0A008CE89D /* ViewController.swift in Sources */,
 				C538B3DA262EB8D3008CE89D /* ArticleViewModel.swift in Sources */,
 				C538B36A262EAB0A008CE89D /* AppDelegate.swift in Sources */,
+				C5A7F44E263EBB1B00F56970 /* CountUpViewController.swift in Sources */,
+				C5A7F45E263EBDBF00F56970 /* CounterViewModel.swift in Sources */,
 				C538B36C262EAB0A008CE89D /* SceneDelegate.swift in Sources */,
 				C538B3C3262EB071008CE89D /* URLRequest+.swift in Sources */,
 				C579CB4226318ACD009FE91F /* PhotosCollectionViewCell.swift in Sources */,
