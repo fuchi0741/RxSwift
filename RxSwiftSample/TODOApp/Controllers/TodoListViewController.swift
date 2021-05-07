@@ -28,7 +28,7 @@ final class TodoListViewController: UIViewController {
     @IBAction private func didTapPrityValueChanged(_ sender: UISegmentedControl) {
         let AllSegementedItem = 1
         let priority = Priority(rawValue: sender.selectedSegmentIndex - AllSegementedItem)
-        filterTasks(by: priority)
+        return filterTasks(by: priority)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -80,7 +80,8 @@ extension TodoListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TodoListTableViewCell", for: indexPath) as? TodoListTableViewCell else { return UITableViewCell() }
-        cell.textLabel?.text = filteredTasks[indexPath.row].title
+        let item = filteredTasks[indexPath.row]
+        cell.configure(title: item.title, priority: item.priority)
         return cell
     }
 }

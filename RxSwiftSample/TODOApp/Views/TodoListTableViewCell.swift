@@ -7,17 +7,23 @@
 
 import UIKit
 
-class TodoListTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+final class TodoListTableViewCell: UITableViewCell {
     
+    @IBOutlet weak private var taskTitleLabel: UILabel!
+    @IBOutlet weak private var priorityLabel: UILabel!
+    
+    func configure(title: String, priority: Priority) {
+        taskTitleLabel.text = title
+        priorityLabel.text = priority.title
+    }
+}
+
+extension Priority {
+    var title: String {
+        switch self {
+        case .high: return "緊急"
+        case .medium: return "普通"
+        case .low: return "いつか"
+        }
+    }
 }
