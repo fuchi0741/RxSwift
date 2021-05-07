@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rty-4e-Bxe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A7V-Hm-3qS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -21,21 +21,28 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACz-Ue-Oha">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="258"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="193.5"/>
                                         <state key="normal" title="カウントアップApp"/>
                                         <connections>
                                             <segue destination="525-f0-79n" kind="show" id="XmG-ZS-NPM"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZf-cs-0Ls">
-                                        <rect key="frame" x="0.0" y="258" width="414" height="258"/>
+                                        <rect key="frame" x="0.0" y="193.5" width="414" height="193.5"/>
                                         <state key="normal" title="基礎的なRxSwift"/>
                                         <connections>
                                             <action selector="basicRxSwift:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c9f-s3-EWj"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xei-Vn-YJw">
+                                        <rect key="frame" x="0.0" y="387" width="414" height="193.5"/>
+                                        <state key="normal" title="TODOアプリ"/>
+                                        <connections>
+                                            <segue destination="A7V-Hm-3qS" kind="show" id="6dM-qg-8t7"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWS-hn-cL1">
-                                        <rect key="frame" x="0.0" y="516" width="414" height="258"/>
+                                        <rect key="frame" x="0.0" y="580.5" width="414" height="193.5"/>
                                         <state key="normal" title="PickupPicture"/>
                                         <connections>
                                             <segue destination="58B-tA-1i4" kind="show" identifier="toMVVM" id="zYR-x5-3kq"/>
@@ -61,6 +68,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="725" y="84"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Oci-np-BXa">
+            <objects>
+                <viewController id="A7V-Hm-3qS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gr6-Kl-ETF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nWQ-MD-E8S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gPh-O3-yLk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="njT-Jw-pI3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1530" y="307"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="L52-EP-b6J">
@@ -100,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZH-nv-Fpu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1409" y="-589"/>
+            <point key="canvasLocation" x="1452" y="-993"/>
         </scene>
         <!--Count Up View Controller-->
         <scene sceneID="iqi-ZV-TEX">
@@ -158,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcG-Wg-llK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2232" y="-923"/>
+            <point key="canvasLocation" x="2145" y="-993"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="5RX-cn-FGr">
@@ -202,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Gv-7e-6Kp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1361" y="84"/>
+            <point key="canvasLocation" x="1451" y="-348"/>
         </scene>
         <!--Photo Collection View Controller-->
         <scene sceneID="U8A-uT-e0n">
@@ -248,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rR-Tg-AB3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016" y="84"/>
+            <point key="canvasLocation" x="2145" y="-348"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="3cp-ww-OII">
@@ -279,7 +302,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9go-F9-lfw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1410" y="756"/>
+            <point key="canvasLocation" x="1451" y="1041"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dgm-vT-Uxy">
