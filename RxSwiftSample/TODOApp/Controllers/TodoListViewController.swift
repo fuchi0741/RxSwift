@@ -58,18 +58,19 @@ final class TodoListViewController: UIViewController {
     }
     
     private func filterTasks(by priority: Priority?) {
-        if priority == nil {
+        guard let priority = priority else {
             self.filteredTasks = self.tasks.value
             self.updateTableView()
-        } else {
-            self.tasks.map { tasks in
-                return tasks.filter { $0.priority == priority! }
-            }.subscribe(onNext: { [weak self] tasks in
-                guard let self = self else { return }
-                self.filteredTasks = tasks
-                self.updateTableView()
-            }).disposed(by: disposeBag)
+            return
         }
+        
+        self.tasks.map { tasks in
+            return tasks.filter { $0.priority == priority }
+        }.subscribe(onNext: { [weak self] tasks in
+            guard let self = self else { return }
+            self.filteredTasks = tasks
+            self.updateTableView()
+        }).disposed(by: disposeBag)
     }
 }
 
